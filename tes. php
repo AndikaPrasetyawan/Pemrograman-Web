@@ -1,0 +1,31 @@
+<?php
+$biodata = [
+    "nama" => "noven",
+    "pekerjaan" => "progamer",
+    "pendidikan" => "S1",
+    "umur"  => "18",
+    "nilai" => "a",
+    "hobi" => [
+        "tidur", "rebahan", "duduk"
+    ]
+];
+
+foreach ($biodata as $key => $value) {
+    if ($key == "umur") {
+        if ($value > 30) {
+            echo "Pekerjaan: " . $biodata['pekerjaan'] . PHP_EOL;
+        } else {
+            echo "Pendidikan: " . $biodata['pendidikan'] . PHP_EOL;
+        }
+    } elseif ($key == "hobi") {
+        echo "Hobi:" . PHP_EOL;
+        $a = 1;
+        foreach ($value as $hobi) {
+            echo $a . ". " . $hobi . PHP_EOL;
+            $a++;
+        }
+    } else {
+        echo $key . ':' . $value . PHP_EOL;
+    }
+}
+?>
