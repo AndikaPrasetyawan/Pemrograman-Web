@@ -20,3 +20,25 @@ foreach ($biodata as $key => $value) {
     } else {
         echo $key . ':' . $value . PHP_EOL;
 }}
+foreach ($biodata['nilai'] as $k => $v) {
+    $s = "semester " . ($k + 1);
+    echo "nilai {$s} : {$v} \n";
+
+    switch ($v) {
+        case 'A':
+            echo "Predikat {$s} : Sangat Baik \n";
+            break;
+        case 'B':
+            echo "Predikat {$s} : Baik \n";
+            break;
+        case 'C':
+            echo "Predikat {$s} : Cukup \n";
+            break;
+        case 'D':
+            echo "Predikat {$s} : Kurang \n";
+            break;
+        default:
+            echo "Predikat {$s} : - \n";
+            break;
+    }
+}
